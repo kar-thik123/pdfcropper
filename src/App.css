@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input-section {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.pdf-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 20px 0;
+  background: #fff;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.pdf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pdf-container.crop-mode .pdf-overlay {
+  pointer-events: auto;
+}
+
+.pdf-container.crop-mode {
+  cursor: crosshair;
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.crop-selector {
+  border: 2px solid #61dafb;
+  background: rgba(97, 218, 251, 0.1);
+  position: absolute;
+  z-index: 1000;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.zoom-controls {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.start-crop-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #4fa8c7;
+}
+
+.start-crop-btn:hover {
+  background-color: #45a049;
+}
+
+.crop-instructions {
+  color: #61dafb;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.selection-area {
+  position: absolute;
+  border: 2px solid #61dafb;
+  background: rgba(97, 218, 251, 0.1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+button svg {
+  margin-right: 8px;
+}
+
+.start-crop-btn svg {
+  margin-right: 8px;
+}
